@@ -1,0 +1,18 @@
+:root {
+  --background-color: hsl(37, 51%, 70%);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box; 
+}
+
+* {
+  margin: 0;
+}
+
+html,
+body {
+  height:100%;
+}
