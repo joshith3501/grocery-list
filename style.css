@@ -1,5 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500&display=swap');
+
+
 :root {
-  --background-color: hsl(37, 51%, 70%);
+  --bg-clr: hsl(37, 100%, 92%);
+  --prm-clr-one: hsl(37, 100%, 50%);
+  --prm-clr-two: hsl(37, 53%, 69%);
+
+  --clr-ntr-one:hsl(115, 25%, 69%);
+  --clr-ntr-two:hsl(91, 32%, 77%);
+  --clr-ntr-three:hsl(78, 49%, 85%);
+  --clr-ntr-four:hsl(78, 100%, 95%);
+
+  --ff-family-one: 'Poppins', sans-serif;
+  --ff-family-two: 'Cinzel', sans-serif;
 }
 
 *,
@@ -15,4 +30,91 @@
 html,
 body {
   height:100%;
+  font-family:var(--ff-family-one);
+}
+
+body {
+  background-color: var(--clr-ntr-one);
+  display:grid;
+  place-items:center;
+}
+
+.container {
+  background-color:var(--clr-ntr-four);
+  padding:2rem;
+  border-radius:0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0,0,0,0.2);
+}
+
+h1 {
+  font-size: 3em;
+  font-family:var(--ff-family-two);
+  text-align:center;
+  margin:1rem 0;
+}
+
+.grocery-form {
+  margin:1rem 0;
+  display: flex;
+  gap: 1rem;
+}
+
+#grocery-input {
+  border: 1px solid var(--clr-ntr-one);
+  padding:0.5rem; 
+  border-radius: 0.25rem;
+  width:25rem;
+  height:2rem;
+}
+
+#grocery-submit {
+  width:5rem;
+  cursor:pointer;
+  border-radius:0.25rem;
+  border:1px solid var(--clr-ntr-one);
+  background-color:var(--clr-ntr-two);
+}
+
+#grocery-submit:hover {
+  background-color:var(--clr-ntr-three);
+  /* color:var(--clr-ntr-two); */
+  color:black;
+}
+
+#grocery-submit:active {
+  transform:scale(0.95);
+}
+
+.task-container {
+  margin: 2rem 0;
+  display:flex;
+  flex-direction:column;
+  gap:0.5rem;
+}
+
+.task {
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:1rem;
+  border-radius:0.5rem;
+  background-color:var(--clr-ntr-three);
+  /* box-shadow: 0 0 0.5rem rgba(0,0,0,0.2); */
+}
+
+.task i {
+  margin:0 0.5rem;
+  cursor:pointer;
+}
+
+.fa-circle-check {
+  color:rgb(46, 134, 46);
+}
+
+.fa-pen-to-square {
+  color:rgb(207, 174, 89);
+}
+
+.fa-trash {
+  color:rgb(169, 68, 68);
 }
