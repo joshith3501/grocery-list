@@ -1,7 +1,9 @@
 
 const tasks = [];
 
-
+if(localStorage.getItem('tasks')) {
+    tasks.push(...JSON.parse(localStorage.getItem('tasks')));
+}
 
 let submitElement = document.querySelector('.grocery-submit');
 let allTasks = document.querySelectorAll('.task');
@@ -92,9 +94,6 @@ function updateList() {
     editTask = document.querySelectorAll('.edit-button');
     // checkTask = document.querySelectorAll('.check-button');
     deleteTask = document.querySelectorAll('.delete-button');
-
-
-    console.log(tasks);
     
     deleteTask.forEach((task, index) => {
         task.addEventListener('click', () => {
@@ -115,6 +114,9 @@ function updateList() {
             editingTask(task, index);
         });
     });
+
+
+    localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 submitElement.addEventListener('click', addingTask);
