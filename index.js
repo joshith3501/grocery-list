@@ -8,6 +8,7 @@ let allTasks = document.querySelectorAll('.task');
 let editTask = document.querySelectorAll('.edit-button');
 // let checkTask = document.querySelectorAll('.check-button');
 let deleteTask = document.querySelectorAll('.delete-button');
+let deleteAll = document.querySelector('.grocery-clear');
 
 
 updateList();
@@ -119,3 +120,7 @@ function updateList() {
 submitElement.addEventListener('click', addingTask);
 
 
+deleteAll.addEventListener('click', () => {
+    tasks.splice(0, tasks.length);
+    updateList();
+});
