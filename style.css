@@ -160,3 +160,27 @@ h1 {
 .fa-trash {
   color:rgb(169, 68, 68);
 }
+
+
+@media screen and (max-width: 376px) {
+  .container {
+    width:20rem;
+  }
+
+  .grocery-form {
+    align-items:center;
+    flex-direction:column;
+    gap:0.5rem;
+  }
+
+  .grocery-input{
+    width: 15rem;
+  }
+  .grocery-submit {
+    width: 3.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}

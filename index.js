@@ -35,11 +35,11 @@ function addingTask() {
 
     if(name){
         tasks.push(name);
-        flashMessage('Task added successfully', 'success');
+        flashMessage('Item added successfully', 'success');
     }
     else 
     {
-        flashMessage('Please enter a task', 'danger');
+        flashMessage('Please enter an item', 'danger');
     }   
 
     taskInput.value = '';
@@ -59,11 +59,14 @@ function editingTask(task, index) {
         if (input.value.trim() !== '') {
         tasks[index] = input.value;
         updateList();
-        editElement.innerHTML = 'Submit';
+        input.value = '';
+
+        flashMessage('Item edited successfully', 'success');
+        editElement.innerHTML = 'Add';
         editElement.removeEventListener('click', handleEditClick); 
         submitElement.addEventListener('click', addingTask); 
         } else {
-        flashMessage('Please enter a task', 'danger');
+        flashMessage('Please enter an Item', 'danger');
         }
     }
 
