@@ -32,7 +32,8 @@ function flashMessage(message, type) {
 }
 
 
-function addingTask() {
+function addingTask(e) {
+    e.preventDefault();
     const taskInput = document.querySelector('.grocery-input');
     const name = taskInput.value;
 
