@@ -60,7 +60,7 @@ h1 {
   gap: 1rem;
 }
 
-#grocery-input {
+.grocery-input {
   border: 1px solid var(--clr-ntr-one);
   padding:0.5rem; 
   border-radius: 0.25rem;
@@ -68,7 +68,7 @@ h1 {
   height:2rem;
 }
 
-#grocery-submit {
+.grocery-submit {
   width:5rem;
   cursor:pointer;
   border-radius:0.25rem;
@@ -76,13 +76,31 @@ h1 {
   background-color:var(--clr-ntr-two);
 }
 
-#grocery-submit:hover {
+.grocery-submit:hover {
   background-color:var(--clr-ntr-three);
   /* color:var(--clr-ntr-two); */
   color:black;
 }
 
-#grocery-submit:active {
+.grocery-edit {
+  width:5rem;
+  cursor:pointer;
+  border-radius:0.25rem;
+  border:1px solid var(--clr-ntr-one);
+  background-color:var(--clr-ntr-two);
+}
+
+.grocery-edit:hover {
+  background-color:var(--clr-ntr-three);
+  /* color:var(--clr-ntr-two); */
+  color:black;
+}
+
+.grocery-edit:active {
+  transform:scale(0.95);
+}
+
+.grocery-submit:active {
   transform:scale(0.95);
 }
 
@@ -91,6 +109,18 @@ h1 {
   text-align:center;
   position:absolute;
   top:10.5rem;
+}
+
+.danger {
+  background-color:rgb(237, 142, 142);
+}
+
+.success {
+  background-color:rgb(160, 245, 160);
+}
+
+.checked {
+  text-decoration:line-through;
 }
 
 .task-container {
@@ -110,9 +140,13 @@ h1 {
   /* box-shadow: 0 0 0.5rem rgba(0,0,0,0.2); */
 }
 
-.task i {
+.task > .task-actions> i {
   margin:0 0.5rem;
   cursor:pointer;
+}
+
+.checked > .task-description{
+  text-decoration: line-through;
 }
 
 .fa-circle-check {

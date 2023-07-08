@@ -10,20 +10,21 @@
   <main>
     <article class="container">
       <h1>Grocery List</h1>
-      <form class="grocery-form">
-        <input type="text" id="grocery-input" placeholder="e.g. milk">
-        <button type="submit" id="grocery-submit">Submit</button>
-      </form>
-      <div class="flash-message">added succesfully</div>
+      <div class="grocery-form">
+        <input type="text" class="grocery-input" 
+        id="input-element" placeholder="e.g. milk">
+        <button id="submit-element" class="grocery-submit grocery-edit">Submit</button>
+      </div>
+      <div class="flash-message"></div>
       <div class="task-container">
-        <div class="task">
-          <div>Eggs and Milk</div>
-          <div>
-            <i class="fa-solid fa-circle-check"></i>
-            <i class="fa-solid fa-pen-to-square"></i>
-            <i class="fa-solid fa-trash"></i>
-          </div>
-        </div>
+          <!-- <div class="task">
+            <div class='task-description'>Milk and eggs</div>
+            <div class='task-actions'>
+                <i class="fa-solid fa-circle-check check-button"></i>
+                <i class="fa-solid fa-pen-to-square edit-button"></i>
+                <i class="fa-solid fa-trash delete-button"></i>
+            </div>
+          </div> -->
       </div>
     </article>
   </main>
