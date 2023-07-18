@@ -15,7 +15,30 @@ let deleteAll = document.querySelector('.grocery-clear');
 
 updateList();
 
+function confirmDelete(index) {
+    let confirmElement = document.querySelector('.modal-overlay');
+    confirmElement.classList.add('show');
+    let confirmButton = document.querySelector('.modal-confirm');
+    let cancelButton = document.querySelector('.modal-cancel');
 
+    confirmButton.addEventListener('click', () => {
+        deletingTask(index);
+        console.log('deleted');
+        updateList();
+        confirmElement.classList.remove('show');
+    }
+    );
+
+    cancelButton.addEventListener('click', () => {
+        confirmElement.classList.remove('show');
+    }
+    );
+}
+
+function deletingTask(index) {
+    tasks.splice(index, 1);
+    updateList();
+}
 
 
 function flashMessage(message, type) {
@@ -98,8 +121,7 @@ function updateList() {
     
     deleteTask.forEach((task, index) => {
         task.addEventListener('click', () => {
-            tasks.splice(index, 1);
-            updateList();
+            confirmDelete(index);
         });
     });
 
@@ -118,6 +140,7 @@ function updateList() {
 
 
     localStorage.setItem('tasks', JSON.stringify(tasks));
+    console.log(tasks);
 }
 
 submitElement.addEventListener('click', addingTask);

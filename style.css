@@ -47,6 +47,35 @@ body {
   position:relative;
 }
 
+.modal-overlay{
+  position:fixed;
+  top: 0;
+  right:0;
+  z-index:2;  
+  width:100%;
+  height:100%;
+  display:grid;
+  place-items: center;
+  background-color:rgba(68, 66, 66, 0.553);
+  z-index:1;
+  visibility:hidden;
+}
+
+.modal-overlay > div {
+  background-color:white;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 0.5rem rgba(0,0,0,0.2);
+}
+
+.modal-overlay > div > * {
+  margin:1rem 0;
+}
+
+.show {
+  visibility:visible;
+}
+
 h1 {
   font-size: 3em;
   font-family:var(--ff-family-two);
